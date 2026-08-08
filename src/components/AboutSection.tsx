@@ -29,15 +29,19 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                Ingeniero de sonido con experiencia en producción musical, grabación,
-                mezcla y optimización de sistemas de audio profesionales.
+                Ingeniero de Sonido con experiencia en producción de eventos en vivo,
+                operación de sistemas de audio profesional, grabación, edición y
+                optimización de sistemas.
               </p>
               <p>
-                Experiencia en sonido en vivo (FOH y Monitores), eventos corporativos
-                y proyectos audiovisuales.
+                He participado en conciertos, eventos corporativos y producciones
+                audiovisuales, desempeñándome en áreas como FOH, monitores, Stage
+                Management, soporte técnico, ingeniero de grabación y coordinador de RF.
               </p>
               <p>
-                Enfoque en precisión técnica, calidad sonora y ejecución profesional.
+                Me adapto rápidamente a diferentes entornos de trabajo, resuelvo desafíos
+                técnicos con criterio y mantengo altos estándares de calidad en cada
+                producción.
               </p>
             </div>
             <div className="mt-8 flex items-center gap-6 text-sm text-muted-foreground">
