@@ -1,9 +1,32 @@
 import { Play } from "lucide-react";
 
 const projects = [
-  { title: "Mariposas Live Session", category: "Live Session" },
-  { title: "Amiga Mía Live Session", category: "Live Session" },
-  { title: "Proyecto 01-8000-UNKNWN", category: "Producción" },
+  {
+    title: "EP Live Session – Penchy Castro",
+    category: "Grabación multicanal",
+    points: [
+      "Asistencia técnica en la grabación multicanal de la sesión en vivo.",
+      "Configuración y verificación de micrófonos, cableado y flujo de señal.",
+      "Apoyo en la edición y mezcla del material grabado.",
+    ],
+  },
+  {
+    title: "El Puñal Live Session – Walter Silva",
+    category: "Producción audiovisual",
+    points: [
+      "Coordinación del escenario y apoyo logístico durante la producción.",
+      "Supervisión del sistema de monitoreo para los músicos.",
+      "Asistencia técnica al ingeniero de grabación y verificación del flujo operativo.",
+    ],
+  },
+  {
+    title: "01-8000-UNKNWN",
+    category: "Producción musical",
+    points: [
+      "Cofundador del proyecto desde septiembre de 2020.",
+      "Edición, mezcla y mastering.",
+    ],
+  },
 ];
 
 const PortfolioSection = () => {
@@ -19,23 +42,24 @@ const PortfolioSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p) => (
-            <div
+            <article
               key={p.title}
-              className="group relative aspect-[4/3] bg-card overflow-hidden cursor-pointer"
+              className="group bg-card p-8 hover:bg-muted transition-colors duration-300"
             >
-              {/* Dark placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-br from-muted to-background" />
-
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500 flex items-center justify-center">
-                <div className="text-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                  <Play className="w-10 h-10 text-foreground mx-auto mb-3" strokeWidth={1} />
-                  <h3 className="text-foreground font-semibold">{p.title}</h3>
-                  <p className="text-muted-foreground text-xs mt-1">{p.category}</p>
-                  <div className="w-8 h-0.5 bg-accent mx-auto mt-3" />
-                </div>
-              </div>
-            </div>
+              <Play className="w-8 h-8 text-accent mb-6" strokeWidth={1.5} />
+              <h3 className="text-lg font-semibold text-foreground mb-1">{p.title}</h3>
+              <p className="text-muted-foreground text-xs uppercase tracking-[0.2em]">
+                {p.category}
+              </p>
+              <div className="w-8 h-0.5 bg-accent my-4 group-hover:w-12 transition-all duration-300" />
+              <ul className="space-y-2">
+                {p.points.map((pt) => (
+                  <li key={pt} className="text-muted-foreground text-sm leading-relaxed">
+                    {pt}
+                  </li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </div>
