@@ -36,6 +36,12 @@
 
     --radius: 0.25rem;
 
+    --accent-glow: 355 90% 55%;
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-surface: linear-gradient(160deg, hsl(0 0% 11% / 0.9), hsl(0 0% 6% / 0.9));
+    --shadow-accent: 0 20px 60px -25px hsl(var(--accent) / 0.55);
+    --shadow-elevate: 0 24px 70px -30px hsl(0 0% 0% / 0.9);
+
     --sidebar-background: 0 0% 4.3%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 355 84% 41%;
@@ -64,6 +70,57 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground to-foreground/50;
   }
+
+  .text-gradient-accent {
+    background-image: var(--gradient-accent);
+    @apply bg-clip-text text-transparent;
+  }
+
+  .surface-card {
+    background-image: var(--gradient-surface);
+    @apply border border-border/60 backdrop-blur-sm transition-all duration-500;
+  }
+
+  .surface-card:hover {
+    border-color: hsl(var(--accent) / 0.5);
+    box-shadow: var(--shadow-elevate);
+    transform: translateY(-6px);
+  }
+
+  .accent-glow {
+    box-shadow: var(--shadow-accent);
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.35) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.35) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(ellipse at center, black, transparent 75%);
+  }
+
+  .marquee-track {
+    animation: marquee 28s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.55; }
+  50% { transform: translateY(-24px) scale(1.06); opacity: 0.8; }
+}
+
+@keyframes pulse-bar {
+  0%, 100% { transform: scaleY(0.25); }
+  50% { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
 }

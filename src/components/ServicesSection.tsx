@@ -1,3 +1,4 @@
+import Reveal from "@/components/Reveal";
 import { Music, Headphones, Mic, Settings, Radio, Podcast } from "lucide-react";
 
 const services = [
@@ -37,26 +38,27 @@ const ServicesSection = () => {
   return (
     <section id="servicios" className="py-24 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-accent text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-          Servicios
-        </p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16">
-          Lo que puedo hacer
-          <br />
-          por tu proyecto
-        </h2>
+        <Reveal>
+          <p className="text-accent text-xs font-semibold tracking-[0.35em] uppercase mb-4">
+            Servicios
+          </p>
+          <h2 className="text-3xl lg:text-5xl font-bold text-foreground tracking-tight mb-16">
+            Lo que puedo hacer
+            <br />
+            <span className="text-gradient-accent">por tu proyecto</span>
+          </h2>
+        </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s) => (
-            <div
-              key={s.title}
-              className="group bg-card p-8 hover:bg-muted transition-colors duration-300"
-            >
-              <s.icon className="w-8 h-8 text-accent mb-6" strokeWidth={1.5} />
+          {services.map((s, i) => (
+            <Reveal key={s.title} delay={i * 80}>
+            <div className="group surface-card p-8 h-full">
+              <s.icon className="w-8 h-8 text-accent mb-6 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
               <h3 className="text-lg font-semibold text-foreground mb-2">{s.title}</h3>
               <div className="w-8 h-0.5 bg-accent mb-4 group-hover:w-12 transition-all duration-300" />
               <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>
