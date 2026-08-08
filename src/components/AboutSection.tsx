@@ -1,4 +1,5 @@
 import aboutImg from "@/assets/about-portrait.jpg";
+import Reveal from "@/components/Reveal";
 
 const AboutSection = () => {
   return (
@@ -6,7 +7,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
-          <div className="relative">
+          <Reveal className="relative">
             <div className="aspect-[3/4] overflow-hidden">
               <img
                 src={aboutImg}
@@ -15,14 +16,14 @@ const AboutSection = () => {
               />
             </div>
             <div className="absolute bottom-0 left-0 w-16 h-1 bg-accent" />
-          </div>
+          </Reveal>
 
           {/* Text */}
-          <div>
-            <p className="text-accent text-sm font-semibold tracking-[0.3em] uppercase mb-4">
+          <Reveal delay={120}>
+            <p className="text-accent text-xs font-semibold tracking-[0.35em] uppercase mb-4">
               Sobre Mí
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground tracking-tight mb-8">
               Dilan Nicolás
               <br />
               Sanabria Murcia
@@ -50,7 +51,7 @@ const AboutSection = () => {
                 Mosquera, Cundinamarca
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

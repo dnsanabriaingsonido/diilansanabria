@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 const experiences = [
   {
     company: "Camaleón Tech",
@@ -63,19 +65,24 @@ const ExperienceSection = () => {
   return (
     <section id="experiencia" className="py-24 lg:py-32 bg-card">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-accent text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-          Experiencia
-        </p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-16">
-          Trayectoria Profesional
-        </h2>
+        <Reveal>
+          <p className="text-accent text-xs font-semibold tracking-[0.35em] uppercase mb-4">
+            Experiencia
+          </p>
+          <h2 className="text-3xl lg:text-5xl font-bold text-foreground tracking-tight mb-16">
+            Trayectoria <span className="text-gradient-accent">Profesional</span>
+          </h2>
+        </Reveal>
 
         <div className="max-w-4xl">
-          {experiences.map((exp) => (
-            <div key={exp.company} className="py-8 border-b border-accent/20 last:border-b-0">
+          {experiences.map((exp, i) => (
+            <Reveal key={exp.company} delay={i * 70}>
+            <div className="group py-8 border-b border-border/60 last:border-b-0 hover:border-accent/60 transition-colors duration-500">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-4">
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground">{exp.company}</h3>
+                  <h3 className="text-xl font-semibold text-foreground group-hover:text-accent transition-colors duration-300">
+                    {exp.company}
+                  </h3>
                   <p className="text-muted-foreground text-sm mt-1">{exp.role}</p>
                 </div>
                 <span className="text-accent text-xs tracking-[0.2em] uppercase whitespace-nowrap">
@@ -91,6 +98,7 @@ const ExperienceSection = () => {
                 ))}
               </ul>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>
