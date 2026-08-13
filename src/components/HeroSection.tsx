@@ -1,7 +1,6 @@
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/dilan-studio.jpg";
 import { ArrowDown } from "lucide-react";
-
-const bars = Array.from({ length: 28 });
+import Waveform from "./Waveform";
 
 const HeroSection = () => {
   return (
@@ -13,10 +12,10 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroBg}
-          alt="Estudio de grabación profesional"
-          className="w-full h-full object-cover scale-105"
+          alt="Dilan Sanabria, ingeniero de sonido, en consola de estudio de grabación profesional"
+          className="w-full h-full object-cover object-[center_30%] scale-105"
         />
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-background/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/80" />
         <div className="absolute inset-0 grid-lines opacity-40" />
         <div
@@ -72,19 +71,8 @@ const HeroSection = () => {
             </a>
           </div>
 
-          {/* Equalizer */}
-          <div className="flex items-end gap-1 h-14 mt-16 max-w-md" aria-hidden="true">
-            {bars.map((_, i) => (
-              <span
-                key={i}
-                className="flex-1 bg-accent/70 origin-bottom"
-                style={{
-                  height: "100%",
-                  animation: `pulse-bar ${0.9 + (i % 5) * 0.22}s ease-in-out ${i * 0.06}s infinite`,
-                }}
-              />
-            ))}
-          </div>
+          {/* Waveform dinámico */}
+          <Waveform />
         </div>
       </div>
 
