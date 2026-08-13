@@ -1,7 +1,6 @@
-import heroBg from "@/assets/hero-bg.jpg";
+import heroAsset from "@/assets/dilan-studio.jpg.asset.json";
 import { ArrowDown } from "lucide-react";
-
-const bars = Array.from({ length: 28 });
+import Waveform from "./Waveform";
 
 const HeroSection = () => {
   return (
