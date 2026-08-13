@@ -71,19 +71,8 @@ const HeroSection = () => {
             </a>
           </div>
 
-          {/* Equalizer */}
-          <div className="flex items-end gap-1 h-14 mt-16 max-w-md" aria-hidden="true">
-            {bars.map((_, i) => (
-              <span
-                key={i}
-                className="flex-1 bg-accent/70 origin-bottom"
-                style={{
-                  height: "100%",
-                  animation: `pulse-bar ${0.9 + (i % 5) * 0.22}s ease-in-out ${i * 0.06}s infinite`,
-                }}
-              />
-            ))}
-          </div>
+          {/* Waveform dinámico */}
+          <Waveform />
         </div>
       </div>
 
