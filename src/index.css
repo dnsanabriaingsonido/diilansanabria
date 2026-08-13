@@ -121,6 +121,21 @@
   50% { transform: scaleY(1); }
 }
 
+@keyframes bar-dance {
+  from { transform: scaleY(0.18); opacity: 0.45; }
+  to { transform: scaleY(var(--bar-scale, 1)); opacity: 1; }
+}
+
+@keyframes wave-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-120px); }
+}
+
+@keyframes wave-breathe {
+  0%, 100% { transform: scaleY(0.7); }
+  50% { transform: scaleY(1.25); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
 }
