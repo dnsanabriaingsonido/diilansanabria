@@ -1,7 +1,5 @@
-import aboutAsset from "@/assets/dilan-perfil.jpg.asset.json";
+import aboutImg from "@/assets/about-portrait.jpg";
 import Reveal from "@/components/Reveal";
-
-const aboutImg = aboutAsset.url;
 
 const AboutSection = () => {
   return (
