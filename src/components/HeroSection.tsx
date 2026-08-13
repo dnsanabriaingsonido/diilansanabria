@@ -11,9 +11,9 @@ const HeroSection = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src={heroBg}
-          alt="Estudio de grabación profesional"
-          className="w-full h-full object-cover scale-105"
+          src={heroAsset.url}
+          alt="Dilan Sanabria, ingeniero de sonido, en consola de estudio de grabación profesional"
+          className="w-full h-full object-cover object-[center_30%] scale-105"
         />
         <div className="absolute inset-0 bg-background/80" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/80" />
