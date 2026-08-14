@@ -51,7 +51,7 @@ const ServicesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
-            <Reveal key={s.title} delay={i * 80}>
+            <Reveal key={s.title} delay={i * 80} parallax={14}>
             <div className="group surface-card p-8 h-full">
               <s.icon className="w-8 h-8 text-accent mb-6 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
               <h3 className="text-lg font-semibold text-foreground mb-2">{s.title}</h3>

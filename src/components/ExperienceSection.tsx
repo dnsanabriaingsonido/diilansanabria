@@ -76,7 +76,7 @@ const ExperienceSection = () => {
 
         <div className="max-w-4xl">
           {experiences.map((exp, i) => (
-            <Reveal key={exp.company} delay={i * 70}>
+            <Reveal key={exp.company} delay={i * 70} parallax={10}>
             <div className="group py-8 border-b border-border/60 last:border-b-0 hover:border-accent/60 transition-colors duration-500">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-4">
                 <div>

@@ -45,7 +45,7 @@ const PortfolioSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
-            <Reveal key={p.title} delay={i * 100}>
+            <Reveal key={p.title} delay={i * 100} parallax={14}>
             <article className="group surface-card p-8 h-full">
               <span className="inline-flex items-center justify-center w-12 h-12 mb-6 border border-accent/40 group-hover:bg-accent group-hover:border-accent transition-all duration-300">
                 <Play className="w-5 h-5 text-accent group-hover:text-accent-foreground transition-colors" strokeWidth={1.5} />
