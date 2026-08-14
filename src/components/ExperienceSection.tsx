@@ -63,7 +63,7 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experiencia" className="py-24 lg:py-32 bg-card">
+    <section id="experiencia" className="py-24 lg:py-40 section-soft section-blend overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <Reveal>
           <p className="text-accent text-xs font-semibold tracking-[0.35em] uppercase mb-4">

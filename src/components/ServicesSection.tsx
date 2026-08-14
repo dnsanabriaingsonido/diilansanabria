@@ -36,7 +36,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="servicios" className="py-24 lg:py-32 bg-background">
+    <section id="servicios" className="py-24 lg:py-40 section-plain section-blend overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <Reveal>
           <p className="text-accent text-xs font-semibold tracking-[0.35em] uppercase mb-4">
