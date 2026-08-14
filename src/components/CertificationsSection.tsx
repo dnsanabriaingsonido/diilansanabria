@@ -24,9 +24,9 @@ const education = [
 
 const CertificationsSection = () => {
   return (
-    <section id="formacion" className="py-24 lg:py-32 bg-card">
+    <section id="formacion" className="py-24 lg:py-40 section-soft section-blend overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <Reveal>
+        <Reveal parallax={36}>
           <p className="text-accent text-xs font-semibold tracking-[0.35em] uppercase mb-4">
             Formación
           </p>
@@ -36,7 +36,7 @@ const CertificationsSection = () => {
         </Reveal>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <Reveal>
+          <Reveal parallax={36}>
             <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-foreground mb-6">
               Historial Académico
             </h3>

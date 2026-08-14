@@ -63,9 +63,9 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experiencia" className="py-24 lg:py-32 bg-card">
+    <section id="experiencia" className="py-24 lg:py-40 section-soft section-blend overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <Reveal>
+        <Reveal parallax={36}>
           <p className="text-accent text-xs font-semibold tracking-[0.35em] uppercase mb-4">
             Experiencia
           </p>
@@ -76,7 +76,7 @@ const ExperienceSection = () => {
 
         <div className="max-w-4xl">
           {experiences.map((exp, i) => (
-            <Reveal key={exp.company} delay={i * 70}>
+            <Reveal key={exp.company} delay={i * 70} parallax={10}>
             <div className="group py-8 border-b border-border/60 last:border-b-0 hover:border-accent/60 transition-colors duration-500">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-4">
                 <div>

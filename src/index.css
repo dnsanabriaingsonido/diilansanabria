@@ -104,6 +104,44 @@
   .marquee-track {
     animation: marquee 28s linear infinite;
   }
+
+  /* Secciones que se difuminan entre sí */
+  .section-soft {
+    position: relative;
+    background-image: linear-gradient(
+      180deg,
+      hsl(var(--card) / 0) 0%,
+      hsl(var(--card) / 0.55) 10%,
+      hsl(var(--card) / 1) 26%,
+      hsl(var(--card) / 1) 74%,
+      hsl(var(--card) / 0.55) 90%,
+      hsl(var(--card) / 0) 100%
+    );
+  }
+
+  .section-plain {
+    position: relative;
+    background-color: transparent;
+  }
+
+  /* Halo suave que une una sección con la siguiente */
+  .section-blend::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6rem;
+    transform: translateX(-50%);
+    width: min(90%, 60rem);
+    height: 12rem;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at center,
+      hsl(var(--accent) / 0.12),
+      transparent 70%
+    );
+    filter: blur(28px);
+  }
+
 }
 
 @keyframes marquee {
